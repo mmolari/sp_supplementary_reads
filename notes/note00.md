@@ -22,6 +22,8 @@ These requires the installation of `minimap2` and `samtools`. Using [conda](http
 
 ## Material and References
 
+- Nanopore sequencing [paper](https://www.nature.com/articles/s41587-021-01108-x)
+
 - Sam file format specifications: <https://samtools.github.io/hts-specs/SAMv1.pdf>, or for a summary see <https://davetang.org/wiki/tiki-index.php?page=SAM>.
 
 - [IGV](https://software.broadinstitute.org/software/igv/) can be used to visualize mapped reads.
