@@ -34,6 +34,8 @@ These requires the installation of `minimap2` and `samtools`. Using [conda](http
 
 - Richard's [notes](https://neherlab.org/201707_qbio_computational_intro.html) on sequencing, mapping and assembly.
 
+- [Pandas](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html): a python library to create, manipulate and save dataframes.
+
 ## Example dataset
 
 we start by looking at `vial_14/time_14` from the september 22 amoxicilin run.
