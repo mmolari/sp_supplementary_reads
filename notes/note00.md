@@ -32,6 +32,8 @@ These requires the installation of `minimap2` and `samtools`. Using [conda](http
 
 - The [pipeline](https://github.com/mmolari/morbidostat-genome-analysis) that we use to analyze the data produced by the morbidostat has some [notes](https://github.com/mmolari/morbidostat-genome-analysis/blob/main/notes/pipeline_description.md) describing the steps we use.
 
+- Richard's [notes](https://neherlab.org/201707_qbio_computational_intro.html) on sequencing, mapping and assembly.
+
 ## Example dataset
 
 we start by looking at `vial_14/time_14` from the september 22 amoxicilin run.
