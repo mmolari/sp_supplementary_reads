@@ -1,4 +1,4 @@
-# Extract secondary mappings
+# Extract supplementary mappings
 
 After getting familiar with sam files, `pysam` and `pandas`, we can work on extracting information on supplementary mappings from the sam file.
 
@@ -13,7 +13,7 @@ Then one can parse this list again and consider all reads whose query name is in
 - whether the read is primary, supplementary or secondary
 - whether the mapping is forward or reverse
 - the start/end of the alignment on the reference/query
-- the alignment length (e.g. on the query) and the total query length (complete of unaligned/clipped regions)
+- the alignment length (e.g. on the query) and the total query length (complete of unaligned/clipped regions, this can be done with the `infer_read_length` function)
 - the total number of matches/insertions/deletions in the alignment
 
 The results should be stored in a pandas dataframe with the above-specified columns, and then saved in `csv` format.
