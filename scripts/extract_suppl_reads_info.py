@@ -8,17 +8,24 @@ parser = argparse.ArgumentParser(description='Extract supplementary mappings.')
 parser.add_argument('--sam', help='SAM input file name.')
 parser.add_argument('--csv', help='CSV output file name.')
 parser.add_argument('--png', help='PNG output file name for primary vs supplementary start positions.')
+#parser.add_argument('--dist', help='Optional CSV output file name for distant queries.')
 args = parser.parse_args()
 
 def get_supp_query_list(sam_file):
+    '''
+    Return list of query names with supplementary reads.
+    '''
     supplementary = []
-    with pysam.AlignmentFile(args.sam) as af:
+    with pysam.AlignmentFile(sam_file) as af:
         for read in af:
             if read.is_supplementary:
                 supplementary.append(read.query_name)
     return supplementary
 
 def write_to_csv(sam_file, csv_file, query_list):
+    '''
+    Return pandas DataFrame with query info and write it to a csv file.
+    '''
     df = []
     with pysam.AlignmentFile(sam_file) as af:
         for read in af:
@@ -49,6 +56,9 @@ def write_to_csv(sam_file, csv_file, query_list):
     return df
 
 def get_query_info_from_name(query_list, df):
+    '''
+    Return dictionary of queries with ref start positions for each mapping type.
+    '''
     query_ids = []
     for s in query_list:
         prim = 0
@@ -70,6 +80,9 @@ def get_query_info_from_name(query_list, df):
         })
 
 def plot_prim_suppl_start(query_list):
+    '''
+    Plot primary vs supplementary ref start positions to a png file.
+    '''
     for q in query_list:
         for s in q["supplementary"]:
             p = q["primary"]

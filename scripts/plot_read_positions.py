@@ -9,7 +9,7 @@ parser.add_argument('--png', help='PNG output file name.')
 parser.add_argument('--step', help='Histogram step size (default = 10000)')
 args = parser.parse_args()
 step = 10000 if args.step is None else args.step
-bins = np.arange(0, 4643630 + 2*step, step)
+bins = np.arange(0, 4643630 + 2*step, step) # use genome size instead
 
 start_prim = list()
 start_supp = list()
