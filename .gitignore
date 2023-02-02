@@ -1,4 +1,5 @@
 /data
 /results
 .ipynb_checkpoints
+.snakemake
 .vscode
