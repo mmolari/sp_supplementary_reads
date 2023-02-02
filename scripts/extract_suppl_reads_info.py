@@ -78,6 +78,7 @@ def get_query_info_from_name(query_list, df):
             "secondary" : sec,
             "supplementary" : supp
         })
+    return query_ids
 
 def plot_prim_suppl_start(query_list):
     '''
